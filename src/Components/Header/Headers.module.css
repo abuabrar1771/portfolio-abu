@@ -1,0 +1,174 @@
+.hero {
+  max-width: 1500px;
+  width: 100%;
+  padding: 80px 8%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero_info {
+  width: 55%;
+}
+.hero_info h1 {
+  font-size: 3.2rem;
+  margin-bottom: 30px;
+}
+.hero_info h1 span {
+  color: var(--main-color);
+  filter: drop-shadow(0 0 10px var(--main-color));
+  position: relative;
+}
+.hero_info h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.hero_info h1 span img {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  transform: translateX(15px);
+}
+.hero_info p {
+  margin-bottom: 20px;
+}
+.social_icons {
+  display: flex;
+  gap: 15px;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--shadow-color);
+  color: var(--main-color);
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* base glow */
+.icon::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: var(--shadow-color);
+  filter: blur(12px);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+/* hover glow */
+.icon:hover {
+  color: #fff;
+  box-shadow:
+    0 0 10px var(--shadow-color),
+    0 0 25px var(--shadow-color),
+    0 0 40px var(--shadow-color);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.icon:hover::before {
+  opacity: 1;
+}
+
+/* subtle breathing animation */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 8px var(--shadow-color);
+  }
+  50% {
+    box-shadow: 0 0 25px var(--shadow-color);
+  }
+  100% {
+    box-shadow: 0 0 8px var(--shadow-color);
+  }
+}
+
+.icon {
+  animation: neonPulse 3s infinite ease-in-out;
+}
+
+
+.hero_img {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+.hero_img img {
+  background-color: #6262ff;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.6s;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+}
+.hero_img img:hover {
+  box-shadow: 0 0 80px var(--shadow-color);
+  transform: translateY(-15px);
+}
+@media (max-width: 1300px) {
+  .hero_info h1 span img {
+    left: -200px;
+    top: 90%;
+  }
+}
+@media (max-width: 950px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero_info {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .hero_img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero_img img {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .hero_img {
+    width: 90vw;
+    height: 90vw;
+    margin-top: 40px;
+  }
+  .hero_info h1 span {
+    font-size: 1.7rem;
+  }
+  .hero_info h1 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 350px) {
+  .hero_img {
+    width: 90vw;
+    height: 90vw;
+    margin-top: 40px;
+  }
+}
