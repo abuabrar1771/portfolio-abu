@@ -75,10 +75,9 @@
 .experienceRow {
   display: flex;
   gap: 20px;
-  width: max-content;   /* 🔥 REQUIRED */
+  width: max-content; /* 🔥 REQUIRED */
   overflow: hidden;
   pointer-events: none;
-  
 }
 /* ================= EXPERIENCE CARD ================= */
 
@@ -189,17 +188,25 @@
   animation-play-state: paused;
 }
 @keyframes scrollX {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes scrollY {
-  from { transform: translateY(0); }
-  to { transform: translateY(-50%); }
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
 }
 
 @media (min-width: 769px) {
- .track {
+  .track {
     display: flex;
     flex-direction: row;
     width: max-content;
@@ -208,9 +215,8 @@
 }
 /* ================= MOBILE ================= */
 
-
 @media (max-width: 768px) {
- .track {
+  .track {
     display: flex;
     flex-direction: column;
     width: max-content;
@@ -218,6 +224,9 @@
   }
   .experience {
     padding: 60px 5%;
+  }
+  .wrapper:active .track {
+    animation-play-state: paused;
   }
 
   .title {
@@ -228,7 +237,6 @@
   /* 🔥 vertical movement on mobile */
   .experienceRow {
     flex-direction: column;
-    
   }
 
   .expCard {
