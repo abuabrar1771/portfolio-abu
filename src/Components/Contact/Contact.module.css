@@ -40,6 +40,49 @@ form input:hover, form input:focus{
     box-shadow: 0 8px 16px var(--shadow-color);
     border: 1px solid var(--main-color);
 }
+.contactlinks a {
+  padding: 10px 18px;
+  border-radius: 25px;
+  color: #fff;
+  display: inline-flex;          /* IMPORTANT */
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;               /* IMPORTANT */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;        /* PERFORMANCE */
+}
+
+@keyframes neonPulse {
+  0%, 100% { box-shadow: 0 0 12px currentColor; }
+  50% { box-shadow: 0 0 30px currentColor; }
+}
+
+.contactlinks a:hover {
+  animation: neonPulse 1.5s infinite alternate;
+}
+
+/* .contactlinks a:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 8px currentColor,
+    0 0 16px currentColor,
+    0 0 32px currentColor;
+} */
+
+
+.email {
+  background: #ea4335;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
 
 @media (max-width:1000px){
     .contact{

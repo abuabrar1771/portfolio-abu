@@ -45,41 +45,57 @@ function Header() {
                 data-aos="fade-right"
                 data-aos-delay="1200"
               >
-                <a href="https://instagram.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
               </span>
               <span
                 className={HeaderCSS.icon}
                 data-aos="fade-right"
-                data-aos-delay="1300">
-               <a href="https://facebook.com" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
+                data-aos-delay="1300"
+              >
+                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
               </span>
               <span
                 className={HeaderCSS.icon}
                 data-aos="fade-right"
                 data-aos-delay="1400"
               >
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">
-                                <FontAwesomeIcon icon={faLinkedin} />
-                              </a>
+                <a href="https://linkedin.com/in/Abrar Faisal" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
               </span>
               <span
                 className={HeaderCSS.icon}
                 data-aos="fade-right"
                 data-aos-delay="1500"
               >
-                <a href="https://github.com" target="_blank" rel="noreferrer">
-                                <FontAwesomeIcon icon={faGithub} />
-                              </a>
+                <a href="https://github.com/abul82" target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
               </span>
             </div>
 
             <div className={HeaderCSS.hero_btns}>
-              <button data-aos="fade-right" data-aos-dely="1600">
+              
+              <button
+                onClick={() => {
+                  document.getElementById("contact").scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              data-aos="fade-right" data-aos-dely="1600">
                 Hire Me
               </button>
-              <button data-aos="fade-right" data-aos-dely="1700">
+              {/* <button data-aos="fade-right" data-aos-dely="1700">
                 Contact
-              </button>
+              </button> */}
             </div>
           </div>
           <div
