@@ -22,6 +22,8 @@ function Experience() {
       <div className={ExperCss.wrapper}>
         {/* SCROLL ROW */}
         <div className={ExperCss.experienceRow} ref={scrollRef}>
+{/* ORIGINAL CONTENT */}          
+<div className={ExperCss.track}>
           <div className={ExperCss.expCard}>
             <h2>Software Developer</h2>
             <h3>Transporeon - A Trimble Company</h3>
@@ -76,7 +78,66 @@ function Experience() {
               <li>Multi-flow React Native project</li>
               <li>Timely feature delivery</li>
             </ul>
+          
           </div>
+{/* DUPLICATE CONTENT */}
+  <div className={ExperCss.expCard}>
+            <h2>Software Developer</h2>
+            <h3>Transporeon - A Trimble Company</h3>
+            <h5>09/2023 - Present, Hyderabad</h5>
+            <ul>
+              <li>
+                Achievements/Tasks Developed and maintained scalable solutions
+              </li>
+              <li>Optimized system performance and reliability</li>
+              <li>Integrated third-party APIs</li>
+              <li>Code reviews and testing</li>
+              <li>Worked with QA and product managers</li>
+            </ul>
+          </div>
+
+          <div className={ExperCss.expCard}>
+            <h2>Software Engineer</h2>
+            <h3>Wipro Technologies</h3>
+            <h5>11/2021 - 09/2023, Chennai</h5>
+            <ul>
+              <li>Developed IOS Plugin</li>
+              <li>Migrated Application to Angular14</li>
+              <li>Created internal Angular framework</li>
+              <li>Handled multi-flow migration</li>
+              <li>Worked with QA and product teams</li>
+            </ul>
+          </div>
+
+          <div className={ExperCss.expCard}>
+            <h2>Android, React Native, Developer</h2>
+            <h3>Wipro Technologies</h3>
+            <h5>12/2020 - 10/2021, Coimbatore</h5>
+            <p className={ExperCss.meta}>
+              <span className={ExperCss.watermark}>
+                {" "}
+                • DTT Provides Custom Solutions, Build Product & Offer
+                Technology Services And Training
+                <a
+                  href="https://dwelltimetech.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  dwelltimetech.com
+                </a>
+              </span>
+            </p>
+
+            <ul>
+              <li>Built Android CMS application</li>
+              <li>Built admin dashboard</li>
+              <li>Hybrid E-Commerce App</li>
+              <li>Multi-flow React Native project</li>
+              <li>Timely feature delivery</li>
+            </ul>
+          
+          </div>
+</div>
         </div>
       </div>
     </section>

@@ -54,23 +54,23 @@
 }
 
 /* FIXED AUTO SCROLL */
-@keyframes autoScrollX {
-  0% {
+/* @keyframes autoScrollX {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(calc(-100% - 20px));
+  to {
+    transform: translateX(-50%);
   }
 }
 
 @keyframes autoScrollY {
-  0% {
+  from {
     transform: translateY(0);
   }
-  100% {
-    transform: translateY(calc(-100% - 20px));
+  to {
+    transform: translateY(-50%);
   }
-}
+} */
 
 .experienceRow {
   display: flex;
@@ -78,7 +78,7 @@
   width: max-content;   /* 🔥 REQUIRED */
   overflow: hidden;
   pointer-events: none;
-  animation: autoScrollX 28s linear infinite;
+  
 }
 /* ================= EXPERIENCE CARD ================= */
 
@@ -147,6 +147,9 @@
 }
 
 /* ================= LIST ================= */
+.expCard:last-child {
+  margin-right: 0;
+}
 
 .expCard ul {
   padding-left: 0;
@@ -182,10 +185,37 @@
   color: var(--shadow-color);
   text-decoration: underline;
 }
+.wrapper:hover .track {
+  animation-play-state: paused;
+}
+@keyframes scrollX {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
+@keyframes scrollY {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
+@media (min-width: 769px) {
+ .track {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    animation: scrollX 28s linear infinite;
+  }
+}
 /* ================= MOBILE ================= */
 
+
 @media (max-width: 768px) {
+ .track {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    animation: scrollY 28s linear infinite;
+  }
   .experience {
     padding: 60px 5%;
   }
@@ -198,7 +228,7 @@
   /* 🔥 vertical movement on mobile */
   .experienceRow {
     flex-direction: column;
-    animation: autoScrollY 28s linear infinite;
+    
   }
 
   .expCard {
