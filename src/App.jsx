@@ -92,21 +92,3 @@ const[footerRef,showFooter]= useInView();
 }
 
 export default App;
-
-
-
-// function App() {
-//   return (
-//     <>
-//     <Nav/>
-//     <Header/>
-//     <About/>
-//     <Services/>
-//     <Projects/>
-//     <Experience/>
-//     <Contact/>
-//     <Footer/>
-//     </>
-//   )
-// }
-// export default App;
